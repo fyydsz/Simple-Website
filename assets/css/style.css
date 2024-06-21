@@ -1,11 +1,5 @@
   /* Import */
   @import url("../font/style.css");
-  
-    .audio-wrapper {
-      position: relative;
-      display: inline-block;
-      z-index: 9999;
-    }
     
     .play-icon {
       position: fixed;
@@ -52,7 +46,7 @@
   
   
   .tooltip {
-    display: block;
+    display: flex;
     position: absolute;
     color: #b6b7b7;
     background: #18191c;
@@ -73,6 +67,7 @@
   }
   
   .tooltip-up::before {
+    display: flex;
     content: "";
     position: absolute;
     bottom: -5px;
@@ -400,7 +395,6 @@
     overflow: visible;
   }
   
-
   
   .nitro-card .card-body .profile-header .badges-container {
     background: #18191c77;
@@ -409,6 +403,56 @@
   .nitro-card .card-body .profile-body .roles .roles-list .role {
     background: #18191c4d;
     border: 1px solid #3f4149;
+  }
+
+  .play-music-btn {
+    position: absolute;
+  }
+
+  #play-music-btn {
+    background-color: #333; /* Dark gray background */
+    color: #ffffff; /* Bright green text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Dark shadow */
+    outline: 2px solid #ffffff; /* White outline around the corners */
+    outline-offset: -2px; /* Move the outline 2px outside the button */
+  }
+  
+  #play-music-btn:hover {
+    outline-color: #66cc00; /* Change the outline color to bright green on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Increased shadow on hover */
+  }
+  
+  #play-music-btn:active {
+    outline-color: #66cc00; /* Change the outline color to bright green on active */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1); /* Even more intense shadow on active */
+  }
+
+  #music-player {
+    position: absolute;
+    display: none;
+    opacity: 0;
+  }
+  
+  #music-player.show {
+    position: absolute;
+    display: block;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
   
   /* Media Queries */
