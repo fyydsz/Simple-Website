@@ -1,0 +1,146 @@
+<html lang="en"><head><meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+
+    <title>Fyy's Card</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#9D00EC">
+    <meta name="description" content="Fyy's website">
+    <meta property="og:site_name" content="Fyy">
+    <meta property="og:title" content="Fyy">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Fyy's website">
+    <meta property="og:image" content="https://i.ibb.co.com/47LhFGV/sparkle.jpg">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://i.ibb.co.com/sw5RLWM/Image180923.png" type="image/x-icon">
+  </head>
+  
+  <body>
+    <div class="card-container">
+      <!-- First Card -->
+      <div class="card nitro-card">
+        <div class="card-header">
+          <div style="background: url('./assets/img/profile/banner.jpg')" class="banner-img"></div>
+        </div>
+        <div class="card-body">
+          <div class="profile-header">
+            <div class="profil-logo">
+              <img src="./assets/img/profile/profile.jpg">
+              <img class="avatar-border" src="https://cdn.discordapp.com/avatar-decoration-presets/a_3c97a2d37f433a7913a1c7b7a735d000.png?size=96&passthrough=true" alt="">
+            </div>
+            <div class="badges-container">
+              <div class="badge-item">
+                <img src="../assets/img/badges/bravery.png" alt="">
+                <div class="tooltip tooltip-up">HypeSquad Bravery</div>
+              </div>
+              <div class="badge-item">
+                <img src="../assets/img/badges/nitro.png" alt="">
+                <div class="tooltip tooltip-up">Nitro</div>
+              </div>
+              <div class="badge-item">
+                <img src="../assets/img/badges/boost.png" alt="">
+                <div class="tooltip tooltip-up">
+                  Boost Server 24 Month
+                </div>
+              </div>
+              <div class="badge-item">
+                <img src="../assets/img/badges/Server_owner.png" alt="">
+                <div class="tooltip tooltip-up">
+                  Server Owner
+                </div>
+              </div>
+              <div class="badge-item">
+                <img src="../assets/img/badges/active-developer.png" alt="">
+                <div class="tooltip tooltip-up">
+                  Active Developer
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-body">
+            <div class="username">
+              fyy_<span>#0</span>
+              <div class="badge">Owner</div>
+            </div>
+            <hr>
+            <div class="basic-infos">
+              <div class="category-title">About Me</div>
+              <p>
+                Project Story on development!<br>
+                <a href="https://discord.gg/Bm8XUVwpCv" target="_blank">♛〡Project Story Server</a> <br>
+              </p>
+            </div>
+            <div class="basic-infos">
+              <div class="category-title">Member Since</div>
+              <p>5 Oct 2018</p>
+            </div>
+            <div class="roles">
+              <div class="category-title">Roles</div>
+              <div class="roles-list">
+                <div class="role">
+                  <div class="role-color" style="background: #f1c40f"></div>
+                  <p>Creators</p>
+                </div>
+                <div class="role">
+                  <div class="role-color" style="background: rgb(255, 0, 212)"></div>
+                  <p>Discord.js Developers</p>
+                </div>
+                <div class="role">
+                  <div class="role-color" style="background: rgb(0, 162, 255)"></div>
+                  <p>Designers</p>
+                </div>
+                <div class="role role-add">
+                  <div class="role-add-text">+</div>
+                </div>
+              </div>
+            </div>
+            <div class="note">
+              <div class="category-title">Note</div>
+              <textarea placeholder="Click for add a note"></textarea>
+            </div>
+            <div class="message">
+              <input type="text" placeholder="Send a message to @fyy_">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="audio-wrapper">
+        <audio id="myAudio" controls="" autoplay="" style="display: none;" __idm_id__="90113">
+          <source src="../assets/bgs/sound.mp3" type="audio/mpeg">
+        </audio>
+        <div class="play-icon"></div>
+        <div class="pause-icon"></div>
+      </div>
+  
+      <script>
+        var audio = document.getElementById('myAudio');
+        var playIcon = document.querySelector('.play-icon');
+        var pauseIcon = document.querySelector('.pause-icon');
+  
+        playIcon.addEventListener('click', function () {
+          audio.play();
+          playIcon.style.display = 'none';
+          pauseIcon.style.display = 'block';
+        });
+  
+        pauseIcon.addEventListener('click', function () {
+          audio.pause();
+          pauseIcon.style.display = 'none';
+          playIcon.style.display = 'block';
+        });
+  
+        audio.addEventListener('play', function () {
+          playIcon.style.display = 'none';
+          pauseIcon.style.display = 'block';
+        });
+  
+        audio.addEventListener('pause', function () {
+          pauseIcon.style.display = 'none';
+          playIcon.style.display = 'block';
+        });
+      </script>
+  
+  
+  </div></body></html>
