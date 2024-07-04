@@ -41,8 +41,8 @@ app.use(express.json());
 app.post('/api/input', async (req, res) => {
     try {
         console.log(req.body)
-        const data = await message.findOne({ date: req.body.date })
-        const filter = { date: req.body.date }
+        const data = await message.findOne({ date: req.body.date });
+        const filter = { date: req.body.date };
         data
             ? await message.updateOne(filter,
                 {
@@ -54,7 +54,7 @@ app.post('/api/input', async (req, res) => {
                     date: req.body.date,
                     message: [req.body.message]
                 }
-            ).save()
+            ).save();
         res.json({ message: 'Input saved successfully!' });
     } catch (error) {
         console.error(error);
