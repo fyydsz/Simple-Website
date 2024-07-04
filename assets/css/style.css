@@ -408,6 +408,21 @@
   .play-music-btn {
     position: absolute;
   }
+  .message p{
+    color: #bdbebf;
+    font-size: 0.8rem;
+    
+    margin-top: 7%;
+    margin-bottom: -3%;
+    text-decoration: none;
+  }
+
+  #message-status {
+    color: white;
+    position: relative;
+    font-size: 12px;
+    margin-top: 2%; /* add 5px margin top */
+  }
 
   #play-music-btn {
     background-color: #333; /* Dark gray background */
