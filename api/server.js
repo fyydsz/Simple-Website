@@ -40,7 +40,7 @@ app.use(express.json());
 
 app.post('/api/server', async (req, res) => {
     try {
-        console.log(req.body)
+        console.info(`Data: ${req.body}`)
         const data = await message.findOne({ date: req.body.date });
         const filter = { date: req.body.date };
         data
