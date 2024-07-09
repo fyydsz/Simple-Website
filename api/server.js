@@ -6,7 +6,7 @@ import { readFile } from 'fs';
 
 const mongoUrl = process.env.MONGOURL;
 mongoose
-     .connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+     .connect(mongoUrl)
      .then(() => console.info( 'Database Connected' ))
      .catch(err => console.error( err ));
 
