@@ -7,10 +7,7 @@ import { readFile } from 'fs';
 const mongoUrl = process.env.MONGOURL;
 connect().catch(err => console.error(err));
 async function connect() {
-    await mongoose.connect(mongoUrl, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }).then(() => console.info("db connected"));
+    await mongoose.connect(mongoUrl).then(() => console.info("db connected"));
 }
 
 const messageSchema = new mongoose.Schema({
