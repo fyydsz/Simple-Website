@@ -56,6 +56,7 @@ app.post('/api/server', async (req, res) => {
                 }
             ).save();
         res.json({ message: 'Input saved successfully!' });
+        res.json({ data: req.body })
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error saving input' });
