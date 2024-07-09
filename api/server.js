@@ -6,9 +6,9 @@ import { readFile } from 'fs';
 
 const mongoUrl = process.env.MONGOURL;
 mongoose
-     .connect( uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
-     .then(() => console.log( 'Database Connected' ))
-     .catch(err => console.log( err ));
+     .connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+     .then(() => console.info( 'Database Connected' ))
+     .catch(err => console.error( err ));
 
 const messageSchema = new mongoose.Schema({
     date: String,
