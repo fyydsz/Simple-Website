@@ -40,7 +40,7 @@ app.use(express.json());
 
 app.post('/api/server', async (req, res) => {
     try {
-        console.info(`Data: ${req.body}`)
+        console.info(req.body)
         const data = await message.findOne({ date: req.body.date });
         const filter = { date: req.body.date };
         data
@@ -55,7 +55,7 @@ app.post('/api/server', async (req, res) => {
                     message: [req.body.message]
                 }
             ).save();
-        res.json({ message: `Input saved successfully: ${req.body}` });
+        res.json({ message: `Input saved successfully!` });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error saving input' });
