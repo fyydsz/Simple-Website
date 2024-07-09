@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 
-app.post('/api/input', async (req, res) => {
+app.post('/api/server', async (req, res) => {
     try {
         console.info(req.body)
         const data = await message.findOne({ date: req.body.date });
