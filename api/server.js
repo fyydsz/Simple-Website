@@ -5,10 +5,17 @@ import express from 'express';
 import { readFile } from 'fs';
 
 const mongoUrl = process.env.MONGOURL;
-mongoose
-     .connect(mongoUrl)
-     .then(() => console.info( 'Database Connected' ))
-     .catch(err => console.error( err ));
+const intialDbConnection = async () => {
+    try {
+        await mongoose.connect(mongoUrl, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        console.info("db connected");
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 const messageSchema = new mongoose.Schema({
     date: String,
