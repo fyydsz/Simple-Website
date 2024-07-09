@@ -4,9 +4,11 @@ import mongoose, { connect } from "mongoose";
 import express from 'express';
 import { readFile } from 'fs';
 
-
 const mongoUrl = process.env.MONGOURL;
-connect(mongoUrl).then(() => console.log("I've connected to mongodb."))
+mongoose
+     .connect( uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+     .then(() => console.log( 'Database Connected' ))
+     .catch(err => console.log( err ));
 
 const messageSchema = new mongoose.Schema({
     date: String,
