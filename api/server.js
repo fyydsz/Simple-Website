@@ -5,7 +5,7 @@ import express from 'express';
 import { readFile } from 'fs';
 
 const mongoUrl = process.env.MONGOURL;
-const intialDbConnection = async () => {
+(async () => {
     try {
         await mongoose.connect(mongoUrl, {
             useNewUrlParser: true,
@@ -15,7 +15,7 @@ const intialDbConnection = async () => {
     } catch (error) {
         console.error(error);
     }
-};
+})();
 
 const messageSchema = new mongoose.Schema({
     date: String,
