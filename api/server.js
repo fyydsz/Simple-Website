@@ -1,6 +1,6 @@
 import { config } from "dotenv";
 config();
-import mongoose, { connect } from "mongoose";
+import mongoose from "mongoose";
 import express from 'express';
 import { readFile } from 'fs';
 
